@@ -2,6 +2,8 @@
 import ReactiveCounter from '/@/components/ReactiveCounter.vue';
 import ReactiveHash from '/@/components/ReactiveHash.vue';
 import ElectronVersions from '/@/components/ElectronVersions.vue';
+
+const APP_VERSION = import.meta.env.VITE_APP_VERSION;
 </script>
 
 <template>
@@ -9,15 +11,23 @@ import ElectronVersions from '/@/components/ElectronVersions.vue';
     alt="Vue logo"
     src="../assets/logo.svg"
     width="150"
-  >
+  />
 
   <p>
-    For a guide and recipes on how to configure / customize this project,<br>
+    <!-- Example how to inject current app version to UI -->
+    App version: {{ APP_VERSION }}
+  </p>
+
+  <p>
+    For a guide and recipes on how to configure / customize this project,<br />
     check out the
     <a
       href="https://github.com/cawa-93/vite-electron-builder"
       target="_blank"
-    >vite-electron-builder documentation</a>.
+    >
+      vite-electron-builder documentation
+    </a>
+    .
   </p>
 
   <fieldset>
@@ -51,6 +61,7 @@ import ElectronVersions from '/@/components/ElectronVersions.vue';
   margin: 60px auto;
   max-width: 700px;
 }
+
 fieldset {
   margin: 2rem;
   padding: 1rem;
